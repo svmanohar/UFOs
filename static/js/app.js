@@ -46,9 +46,7 @@ function handleClick() {
     // Apply `filter` to the table data to only keep the
     // rows where the `datetime` value matches the filter value
     filteredData = filteredData.filter(row => row.datetime === date);
-
-    
-  };
+  }
   // Rebuild the t able using the re-assigned (filtered) data
   // If no date was entered, the data returned is the original filtered data
   buildTable(filteredData);
