@@ -15,17 +15,18 @@
     <link rel="stylesheet" href="static/css/style.css">
 
 </head>
-<body>
+<!--Apply a dark background to the entire page-->
+<body class="bg-dark">
     <!--Create the wrapper class to group title, paragraph, table and filters-->
     <div class="wrapper">
 
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
           <a class="navbar-brand" href="index.html">UFO Sightings</a>
 
         </nav>
         <!--Create a header row with jumbotron styling-->
         <div class="jumbotron">
-            <h1>The Truth is Out There</h1>
+            <h1 class="display-4">The Truth is Out There</h1>
 
         </div>
         <!--Create a container for our data-->
@@ -51,21 +52,21 @@
 
                     <!--Build the filter for our data-->
                     <!--Use a form tag-->
-                    <form>
+                    <form class="bg-dark">
                         <p>Filter Search</p>
                         <!--Create a list to format the filter button-->
-                        <ul class="list-group">
+                        <ul class="bg-dark list-group">
                             <!--List class for the filter input-->
-                            <li class="list-group-item">
+                            <li class="bg-dark list-group-item">
                                 <!--Create a "caption" for the filter--> 
                                 <label for="date">Enter date</label>
                                 <!--Create a field that will accept text input, placeholder is a default/placeholder date to guide users, id=datetime tells what JS code to look for -->
                                 <input type="text" placeholder="1/10/2010" id="datetime">
                             </li>
                             <!--List class for the filter button-->
-                            <li class="list-group-item">
+                            <li class="bg-dark list-group-item">
                                 <!--Add our button, named Filter Table. Its ID allows D3 in app.js to perform Event Handling; a function on click-->
-                                <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                                <button id="filter-btn" type="button" class="btn btn-dark">Filter Table</button>
                             </li>
                         </ul>
                     </form>
@@ -102,5 +103,10 @@
         </div>
 
     </div>
+
+    <!--Import our scripts to be run on this page. Note the order of import is the order of execution-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>      <!--Import D3-->
+    <script src="static/js/data.js"></script>
+    <script src="static/js/app.js"></script>
 </body>
 </html>
