@@ -63,10 +63,22 @@
                                 <!--Create a field that will accept text input, placeholder is a default/placeholder date to guide users, id=datetime tells what JS code to look for -->
                                 <input type="text" placeholder="1/10/2010" id="datetime">
                             </li>
-                            <!--List class for the filter button-->
+                            <!--Initialize additional filter-->
                             <li class="bg-dark list-group-item">
-                                <!--Add our button, named Filter Table. Its ID allows D3 in app.js to perform Event Handling; a function on click-->
-                                <button id="filter-btn" type="button" class="btn btn-dark">Filter Table</button>
+                                <label for="city">Enter a City</label>
+                                <input type="text" placeholder="Roswell" id="city">
+                            </li>
+                            <li class="bg-dark list-group-item">
+                                <label for="state">Enter a State</label>
+                                <input type="text" placeholder="CA" id="state">
+                            </li>
+                            <li class="bg-dark list-group-item">
+                                <label for="country">Enter a Country</label>
+                                <input type="text" placeholder="US" id="country">
+                            </li>
+                            <li class="bg-dark list-group-item">
+                                <label for="shape">Enter a Shape</label>
+                                <input type="text" placeholder="circle" id="shape">
                             </li>
                         </ul>
                     </form>
