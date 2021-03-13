@@ -24,7 +24,7 @@ function buildTable(data) {
 }
 
 // 1. Create a variable to keep track of all the filters as an object.
-var filters = {};
+var filter_search = {};
 
 // 3. Use this function to update the filters. 
 function updateFilters() {
@@ -45,12 +45,12 @@ function updateFilters() {
     // to the filters list. Otherwise, clear that filter from the filters object.
   if (elementValue) {
     // passing filterID as an index into filters assigns it as key, elementValue as pair
-    filters[filterId] = elementValue;
-    console.log(filters); // debug, REMOVE WHEN DONE
+    filter_search[filterId] = elementValue;
+    console.log(filter_search); // debug, REMOVE WHEN DONE
   }
     // if value was not entered, clear filterID from filters object
   else {
-    delete filters[filterId];
+    delete filter_search[filterId];
   }
   
     // 6. Call function to apply all filters and rebuild the table
@@ -66,10 +66,10 @@ function updateFilters() {
   
     // 9. Loop through all of the filters and keep any data that
     // matches the filter values
-    for (let filter in filters) {
-      if (filters[filter]) {
+    for (let filter in filter_search) {
+      if (filter_search[filter]) {
         filteredData = filteredData.filter(row =>
-          row[filter] === filters[filter]
+          row[filter] === filter_search[filter]
           );
       };
     }
