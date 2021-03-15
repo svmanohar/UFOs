@@ -67,7 +67,8 @@ function updateFilters() {
     // 9. Loop through all of the filters and keep any data that
     // matches the filter values
     for (let filter in filter_search) {
-      if (filter_search[filter]) {
+      if (filter_search[filter]) { // passing in filter_search[filter] into the if statement means that IF the key 'filter' exists in the dictionary, then == True
+        // then run the following code
         filteredData = filteredData.filter(row =>
           row[filter] === filter_search[filter]
           );
